@@ -12,6 +12,7 @@ Route.group(() => {
   Route.get('files/:id', 'FileController.show')
   Route.resource('projects', 'ProjectController')
     .apiOnly()
+    // Cria validators
     .validator(new Map(
       [
         [
