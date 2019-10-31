@@ -21,6 +21,7 @@ Route.group(() => {
         ]
       ]
     ))
+    .middleware('is:(administrator || moderator)')
   Route.resource('projects.tasks', 'TaskController')
     .apiOnly()
     .validator(new Map(
